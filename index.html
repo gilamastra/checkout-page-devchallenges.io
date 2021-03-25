@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" href="styles.css">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="flex-container">
+      <div class="flex-content1">
+        <h2 class="checkout check1">Checkout</h2>
+      <div class="Contact-inf">
+        <p class="sub-title">Contact information</p>
+        <div class="email-container relative">
+          <p class="sub-title2">E-mail</p>
+          <span class="material-icons icon">
+            mail
+            </span>
+
+            <form id="form" action="">
+
+          <input required id="email" class="" placeholder="Enter your email..." type="email">
+        </div>
+
+        <div class="phone-container relative   ">
+          <p class="sub-title2">Phone</p>
+          <span class="material-icons icon">
+            phone
+            </span>
+          <input minlength="6"  required placeholder="Enter your phone..." type="text">
+        </div><!--phone-container-->
+      </div><!--contact-inf-->
+
+      <div class="shipping-address relative">
+        <p class="sub-title" style="margin-top:35px;">Shipping address</p>
+        <div class="full-name-container relative">
+          <p class="sub-title2">Full name</p>
+          <span class="material-icons icon">
+            account_circle
+            </span>
+          <input minlength="9" required placeholder="Enter your full name" type="text">
+        </div>
+
+        <div class="adress-container relative">
+          <p class="sub-title2">Adress</p>
+          <span class="material-icons icon">
+            home
+            </span>
+          <input minlength="8" required placeholder="Your address..." type="text">
+        </div><!--phone-container-->
+
+        <div class="city-container relative">
+          <p class="sub-title2">City</p>
+          <span class="material-icons icon">
+            apartment
+            </span>
+          <input minlength="3" required placeholder="Your city..." type="text">
+        </div><!--city-container-->
+      </div><!--contact-inf-->
+
+      <div class="w50">
+        <div class="country-container relative">
+            <p class="sub-title2">Country</p>
+            <span class="material-icons icon">
+              public
+            </span>
+            <select form="form" required name="country" id="country">
+              <option selected value="Brazil">Brazil</option>
+              <option value="United States">United States</option>
+              <option value="Spain">Spain</option>
+            </select>
+          </div><!--country-container-->
+
+        <div class="postal-container relative">
+          <p class="sub-title2">Postal code</p>
+          <span class="material-icons icon">
+            public
+          </span>
+          <input required placeholder="Your postal code..." type="text">
+      </div><!--postal-->
+      </div><!--w50-->
+      <div class="save">
+        <input id="check" type="checkbox" hidden >
+        <label for="check" class="checkmark"></label>
+        <p class="check-p">Save this information for next time</p>
+        <button onclick="formEnviado()">Continue  </button>
+
+      </form>
+      </div><!--save-->
+      </div><!--flex-content-1-->
+
+
+      <div class="flex-content-2">
+        <h2 class="checkout check2">Checkout</h2>
+
+        <div class="item-1">
+          <div class="flex-item-1">
+            <div class="img-item-1"></div>
+            <div class="name-price-item-1">
+              <h2>Vintage Backbag</h2>
+              <div class="price-1-flex">
+                <h2 class="first-price">$54.99</h2>
+                <h2 class="second-price">$94.99</h2>
+              </div><!--price-1-flex-->
+              <div class="square-border">
+                <div class="square-border-items">
+                   <span onclick="diminuirProduto1()" id="less-product-1" class="material-icons icon-flex-2">
+                        minimize
+                     </span>
+                      <span id="amountProd1" class="one" style="background-color:#F2F2F2;cursor:initial;
+                      position: relative;left:5px;bottom:3px;">0</span>
+                      <span onclick="aumentarProduto1()" id="add-product-1" class="material-icons icon-flex-2">
+                        add
+                      </span>
+                </div><!--square-border-items-->
+              </div><!--SQUARE-BORDER-->
+            </div><!--name-price-item1-->
+          </div><!--flex-item-1-->
+        </div><!--item1-->
+
+        <div class="item-2" style="margin-top:30px;">
+          <div class="flex-item-2">
+            <div class="img-item-2"></div>
+            <div class="name-price-item-2">
+              <h2>Vintage Backbag</h2>
+              <div class="price-2-flex">
+                <h2 class="first-price">$74.99</h2>
+                <h2 class="second-price">$124.99</h2>
+              </div><!--price-1-flex-->
+              <div class="square-border">
+                <div class="square-border-items">
+
+                  <span onclick="diminuirProduto2()" id="less-product-2" class="material-icons icon-flex-2">
+                    minimize
+                 </span>
+                  <span id="amountProd2" class="one" style="background-color:#F2F2F2;cursor:initial;
+                  position: relative;left:5px;bottom:3px;">0</span>
+                  <span onclick="aumentarProduto2()" id="add-product-2" class="material-icons icon-flex-2">
+                    add
+
+                </div><!--square-border-items-->
+              </div><!--SQUARE-BORDER-->
+            </div><!--name-price-item2-->
+          </div><!--flex-item-2-->
+        </div><!--item2-->
+
+        <div class="flex-2-shipping">
+          <h3>Shipping</h3>
+          <h3>$19.99</h3>
+        </div>
+
+        <div class="flex-2-total">
+          <h3>Total</h3>
+          <h3 id="total">$19.99</h3>
+
+        </div>        
+      </div><!--flex-content2-->
+    </div><!--flex-container-->
+  </div><!--container-->
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
