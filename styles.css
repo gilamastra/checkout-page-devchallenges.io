@@ -294,6 +294,17 @@ transform: rotate(-0.02deg);
         display: none;
     }
 
+    footer{
+        width:100%;
+        margin-top:35px;
+        display:flex;
+        justify-content: center;
+    }
+    footer h2{
+        font-size:17px;
+
+        color:#b3b3b3;
+    }
 @media screen and (max-width:1024px){
   
     .flex-container{
